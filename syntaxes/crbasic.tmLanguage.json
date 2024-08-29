@@ -53,7 +53,7 @@
 				},
 				{
 					"name":"entity.name.function.DataTable.crbasic",
-					"match": "\\b(Average|CardFlush|CardOut|DataEvent|DataInterval|DataTable|EndTable|DataTime|ETsz|FieldNames|FileMark|FillStopZGOESField|GoesTable|Histogram|Histogrm4d|LevelCrossing|Maximum|Median|Minimum|Moment|OpenInterval|RainflowSample|Sample|SampleFieldCal|SampleMaxMin|StdDev|StructureType|EndStructureType|TableFile|TableHide|Totaliza|WindVector|WorstCase)\\b"
+					"match": "\\b(Average|CardFlush|CardOut|DataEvent|DataInterval|DataTime|ETsz|FieldNames|FileMark|FillStopZGOESField|GoesTable|Histogram|Histogrm4d|LevelCrossing|Maximum|Median|Minimum|Moment|OpenInterval|RainflowSample|Sample|SampleFieldCal|SampleMaxMin|StdDev|StructureType|EndStructureType|TableFile|TableHide|Totaliza|WindVector|WorstCase)\\b"
 				},
 				{
 					"name":"entity.name.function.DataLoggerStatus.crbasic",
@@ -110,7 +110,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.crbasic",
-					"match": "\\b(#Else|#ElseIf|#EndIf|#If|#IfDef|For|To|Alias|ArrayIndex|BeginProg|EndProg|Call|CallTable|Case|Case Else|Case Is|Const|ConstTable|EndConstTable|ContinueScan|Delay|Dim|Do|Loop|Else|ElseIf|EndSequence|ESSInitialize|EssVariables|Exit|ExitDo|ExitFor|ExitFunction|ExitScan|ExitSub|FileManage|For To|Next|Function|EndFunction|If|Then|EndIf|IfTime|IIF|Include|LoggerType|NewFieldNames|Optional|Public|ReadOnly|Return|RunProgram|Scan|NextScan|Select Case|EndSelect|SemaphoreGet|SemaphoreRelease|SlowSequence|Step|Sub|EndSub|SubScan|NextSubScan|TriggerSequence|Units|Until|WaintDigTrig|WaitTriggerSequence|While|Wend)\\b"
+					"match": "\\b(#Else|#ElseIf|#EndIf|#If|#IfDef|For|To|DataTable|EndTable|Alias|ArrayIndex|BeginProg|EndProg|Call|CallTable|Case|Case Else|Case Is|Const|ConstTable|EndConstTable|ContinueScan|Delay|Dim|Do|Loop|Else|ElseIf|EndSequence|ESSInitialize|EssVariables|Exit|ExitDo|ExitFor|ExitFunction|ExitScan|ExitSub|FileManage|For To|Next|Function|EndFunction|If|Then|EndIf|IfTime|IIF|Include|LoggerType|NewFieldNames|Optional|Public|ReadOnly|Return|RunProgram|Scan|NextScan|Select Case|EndSelect|SemaphoreGet|SemaphoreRelease|SlowSequence|Step|Sub|EndSub|SubScan|NextSubScan|TriggerSequence|Units|Until|WaintDigTrig|WaitTriggerSequence|While|Wend)\\b"
 				}
 			]
 		},
@@ -118,7 +118,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.tag.crbasic",
-					"match": "\\b(-|!|&|&=|*|*=|/|/=|@|\\|\\=|^|^=|+|+=|<|<<|<=|<>|=|-=|>|>=|>>|AND|IMP|INTDV|MOD|NOT|OR|XOR)\\b"
+					"match": "\\b(-|!|&|&=|\\*|\\*=|/|/=|@|\\|\\=|\\^|\\^=|\\+|\\+=|<|<<|<=|<>|=|-=|>|>=|>>|AND|IMP|INTDV|MOD|NOT|OR|XOR)\\b"
 				}
 			]
 		},

@@ -1,3 +1,77 @@
 {
-    
+    "Public": {
+        "prefix": "public",
+        "body": [
+            "Public ${1:variableName} As ${2:DataType}",
+            "$0"
+        ],
+        "description": "Creates a new public variable."
+    },
+    "Const": {
+        "prefix": "const",
+        "body": [
+            "Const ${1:ConstantName} As ${2:DataType}",
+            "$0"
+        ],
+        "description": "Creates a new Constant."
+    },
+    "DataTable": {
+        "prefix": "datatable",
+        "body": [
+            "DataTable(${1:tableName}, ${2:Interval}, ${3:NumberOfRecords})",
+            "  DataInterval(${4:IntervalType}, ${5:Interval})",
+            "  ${6:FieldNames}",
+            "EndTable",
+            "$0"
+        ],
+        "description": "Creates a new DataTable."
+    },
+    "CDM_ACPower":{
+        "prefix" : "cdmacpower",
+        "body" : [
+            "CDM_ACPower (${1:CDMType},${2:CPIAdress},${3:DestAC},${4:ConfigAC},${5:LineFrq},${6:cdmChanV},${7:MultV},${8:MaxVrms},${9:cdmChanI},${10:MultI},${2:MaxIrms},${11:RepsI})"
+        ]
+    },
+    "CDM_Battery": {
+        "prefix": "cdmbattery",
+        "body": [
+            "CDM_Battery (${1:CDMType}${2:VCPIAddress}${3:Destination})"
+        ]
+    },
+    "CDM_BrFull": {
+        "prefix": "cdmbrfull",
+        "body": [
+            "CDM_BrFull (${1:CPIAddress}${2:Destination}${3:Repetitions}${4:Voltage Range}${5:CDMDifFChan}${6:CDMExChan}${7:MeasPEx}${8:CDMEm}${9:RevEx}${10:RevDiff}${11:SettlingTIme}${12:CDMfN 1}${13:Multiplier}${14:Offset})"
+        ]
+    },
+    "CDM_BrFull6W": {
+        "prefix": "cdmbrfull6w",
+        "body": [
+            "CDM_BrFull6W (${1:CPIAddress}${2:Destination}${3:Repetitions}${4:Voltage Range}${5:CDMDifFChan}${6:CDMExChan}${7:MeasPEx}${8:CDMEm}${9:RevEx}${10:RevDiff}${11:SettlingTIme}${12:CDMfN 1}${13:Multiplier}${14:Offset})"
+        ]
+    },
+    "CDM_BrHalf": {
+        "prefix": "cdmbrhalf",
+        "body": [
+            "CDM_BrHalf (${1:CPIAddress}${2:Destination}${3:Repetitions}${4:Voltage Range}${5:CDMDifFChan}${6:CDMExChan}${7:MeasPEx}${8:CDMEm}${9:RevEx}${10:RevDiff}${11:SettlingTIme}${12:CDMfN 1}${13:Multiplier}${14:Offset})"
+        ]
+    },
+    "CDM_BrHalf3W": {
+        "prefix": "cdmbrhalf3w",
+        "body": [
+            "CDM_BrHalf3W (${1:CPIAddress},${2:Destination},${3:Repetitions},${4:Voltage Range},${5:CDMDifFChan},${6:CDMExChan},${7:MeasPEx},${8:CDMEm},${9:RevEx},${10:RevDiff},${11:SettlingTime},${12:CDMfN 1},${13:Multiplier},${14:Offset})"
+        ]
+    },
+    "CDM_BrHalf4W": {
+        "prefix": "cdmbrhalf4w",
+        "body": [
+            "CDM_BrHalf4W (${1:CPIAddress},${2:Destination},${3:Repetitions},${4:Voltage Range},${5:CDMDifFChan},${6:CDMExChan}${7:MeasPEx},${8:CDMEm},${9:RevEx},${10:RevDiff},${11:SettlingTime},${12:CDMfN 1},${13:Multiplier},${14:Offset})"
+        ]
+    },
+    "CDM_Delay": {
+        "prefix": "cdmdelay",
+        "body": [
+            "CDM_Delay (${1:CDMType},${2:CPIAddress},${3:DelayOption},${4:Delay},${5:DelayUnits})"
+        ]
+    }
 }
