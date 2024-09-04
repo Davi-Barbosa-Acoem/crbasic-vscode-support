@@ -1,5 +1,0 @@
-CDMType
-CPIAddress
-DelayOption
-Delay
-DelayUnits

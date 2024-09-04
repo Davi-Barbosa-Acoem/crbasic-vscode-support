@@ -2,7 +2,7 @@
     "Public": {
         "prefix": "public",
         "body": [
-            "Public ${1:variableName} As ${2:DataType}",
+            "Public ${1:variableName} As ${2|Float,Long,Boolean,String|}",
             "$0"
         ],
         "description": "Creates a new public variable."
@@ -10,7 +10,7 @@
     "Const": {
         "prefix": "const",
         "body": [
-            "Const ${1:ConstantName} As ${2:DataType}",
+            "Const ${1:ConstantName} As ${2|Float,Long,Boolean,String|}",
             "$0"
         ],
         "description": "Creates a new Constant."
@@ -26,52 +26,80 @@
         ],
         "description": "Creates a new DataTable."
     },
-    "CDM_ACPower":{
-        "prefix" : "cdmacpower",
-        "body" : [
-            "CDM_ACPower (${1:CDMType},${2:CPIAdress},${3:DestAC},${4:ConfigAC},${5:LineFrq},${6:cdmChanV},${7:MultV},${8:MaxVrms},${9:cdmChanI},${10:MultI},${2:MaxIrms},${11:RepsI})"
-        ]
-    },
-    "CDM_Battery": {
-        "prefix": "cdmbattery",
+    "ForLoop": {
+        "prefix": "forloop",
         "body": [
-            "CDM_Battery (${1:CDMType}${2:VCPIAddress}${3:Destination})"
-        ]
+            "For ${1:Index} = ${2:StartValue} To ${3:EndValue} Step ${4:StepValue}",
+            "  ${5:Code}",
+            "Next ${1:Index}",
+            "$0"
+        ],
+        "description": "Creates a For/Next loop."
     },
-    "CDM_BrFull": {
-        "prefix": "cdmbrfull",
+    "IfThenElse": {
+        "prefix": "ifthenelse",
         "body": [
-            "CDM_BrFull (${1:CPIAddress}${2:Destination}${3:Repetitions}${4:Voltage Range}${5:CDMDifFChan}${6:CDMExChan}${7:MeasPEx}${8:CDMEm}${9:RevEx}${10:RevDiff}${11:SettlingTIme}${12:CDMfN 1}${13:Multiplier}${14:Offset})"
-        ]
+            "If ${1:Condition} Then",
+            "  ${2:CodeIfTrue} ' Certifique-se de que o código está correto aqui",
+            "Else",
+            "  ${3:CodeIfFalse} ' Corrija o código conforme necessário",
+            "EndIf",
+            "$0"
+        ],
+        "description": "Creates an If/Then/Else statement."
     },
-    "CDM_BrFull6W": {
-        "prefix": "cdmbrfull6w",
+    "Subroutine": {
+        "prefix": "subroutine",
         "body": [
-            "CDM_BrFull6W (${1:CPIAddress}${2:Destination}${3:Repetitions}${4:Voltage Range}${5:CDMDifFChan}${6:CDMExChan}${7:MeasPEx}${8:CDMEm}${9:RevEx}${10:RevDiff}${11:SettlingTIme}${12:CDMfN 1}${13:Multiplier}${14:Offset})"
-        ]
+            "Sub ${1:SubroutineName}()",
+            "  ${2:Code}",
+            "EndSub",
+            "$0"
+        ],
+        "description": "Creates a new subroutine."
     },
-    "CDM_BrHalf": {
-        "prefix": "cdmbrhalf",
+    "CallTable": {
+        "prefix": "calltable",
         "body": [
-            "CDM_BrHalf (${1:CPIAddress}${2:Destination}${3:Repetitions}${4:Voltage Range}${5:CDMDifFChan}${6:CDMExChan}${7:MeasPEx}${8:CDMEm}${9:RevEx}${10:RevDiff}${11:SettlingTIme}${12:CDMfN 1}${13:Multiplier}${14:Offset})"
-        ]
+            "CallTable ${1:TableName}",
+            "$0"
+        ],
+        "description": "Calls a DataTable."
     },
-    "CDM_BrHalf3W": {
-        "prefix": "cdmbrhalf3w",
+    "ScanLoop": {
+        "prefix": "scanloop",
         "body": [
-            "CDM_BrHalf3W (${1:CPIAddress},${2:Destination},${3:Repetitions},${4:Voltage Range},${5:CDMDifFChan},${6:CDMExChan},${7:MeasPEx},${8:CDMEm},${9:RevEx},${10:RevDiff},${11:SettlingTime},${12:CDMfN 1},${13:Multiplier},${14:Offset})"
-        ]
+            "' Início da varredura (exemplo: Scan(10,Sec,0))",
+            "Scan(${1:Interval},${2:ScanUnits},${3:Offset})",
+            "  ${4:Code}",
+            "NextScan",
+            "' Fim da varredura",
+            "$0"
+        ],
+        "description": "Creates a Scan loop."
     },
-    "CDM_BrHalf4W": {
-        "prefix": "cdmbrhalf4w",
+    "EndProgram": {
+        "prefix": "endprogram",
         "body": [
-            "CDM_BrHalf4W (${1:CPIAddress},${2:Destination},${3:Repetitions},${4:Voltage Range},${5:CDMDifFChan},${6:CDMExChan}${7:MeasPEx},${8:CDMEm},${9:RevEx},${10:RevDiff},${11:SettlingTime},${12:CDMfN 1},${13:Multiplier},${14:Offset})"
-        ]
+            "EndProg",
+            "$0"
+        ],
+        "description": "Ends the program."
     },
-    "CDM_Delay": {
-        "prefix": "cdmdelay",
+    "Variable": {
+        "prefix": "variable",
         "body": [
-            "CDM_Delay (${1:CDMType},${2:CPIAddress},${3:DelayOption},${4:Delay},${5:DelayUnits})"
-        ]
+            "${1:DataType} ${2:VariableName}(${3:Size})",
+            "$0"
+        ],
+        "description": "Declares a variable with a specified type and size."
+    },
+    "Comment": {
+        "prefix": "comment",
+        "body": [
+            "' ${1:CommentText}",
+            "$0"
+        ],
+        "description": "Inserts a comment."
     }
 }
