@@ -29,4 +29,4 @@ If you have suggestions for new snippets or improvements to the existing ones, f
 
 ## License
 
-This extension is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+This extension is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for more details.
