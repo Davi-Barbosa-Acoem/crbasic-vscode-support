@@ -1,5 +1,7 @@
 # CRBasic Language Support Extension
 
+![Logo](sources/crb+vscode_Icon.png)
+
 This Visual Studio Code extension provides syntax highlighting and useful code snippets for the CRBasic programming language. CRBasic is commonly used for programming Campbell Scientific dataloggers, and this extension enhances the development experience by offering structured syntax support and quick code snippets for common tasks.
 
 ## Features

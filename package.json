@@ -4,6 +4,12 @@
   "description": "",
   "version": "0.0.2",
   "publisher": "DaviBarbosa",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Davi-Barbosa-Acoem/crbasic-vscode-support"
+  },
+  "icon": "sources/crb+vscode_Icon.png",
   "engines": {
     "vscode": "^1.92.0"
   },
