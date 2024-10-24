@@ -15,7 +15,7 @@
 			"include": "#numbers"
 		},
 		{
-			"include": "#boolean"
+			"include": "#constants"
 		},
 		{
 			"include": "#operators"
@@ -95,7 +95,7 @@
 					"name":"entity.name.function.StringManipulation.crbasic",
 					"match": "ASCII|CHR|FormatFloat|FormatLong|FormaLongLong|Hez|HexToDec|InStr|Left|Len|LowerCase|LTrim|Mid|Replace|Right|Rtrim|SplitStr|Sprintf|StrComp|Trom|TypeOf|UpperCase"
 				}
-
+				
 			]
 		},
 		"variable": {
@@ -122,11 +122,11 @@
 				}
 			]
 		},
-		"boolean": {
+		"constants": {
 			"patterns": [
 				{
-					"name": "constant.language.boolean.crbasic",
-					"match": "\\b(True|False)\\b"
+					"name": "constant.character",
+					"match": "\\b(As|True|False)\\b"
 				}
 			]
 		},

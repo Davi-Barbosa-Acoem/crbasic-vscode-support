@@ -1,8 +1,8 @@
 {
   "name": "crbasic-vscode-support",
   "displayName": "CRBasic VSCode Support",
-  "description": "",
-  "version": "0.0.2",
+  "description": "VSCode support for the CRBasic programming language.",
+  "version": "0.0.3",
   "publisher": "DaviBarbosa",
   "license": "MIT",
   "repository": {
@@ -16,26 +16,74 @@
   "categories": [
     "Programming Languages"
   ],
+  "main": "./src/extension.js",
+  "activationEvents": [
+    "onLanguage:crbasic",
+    "onCommand:extension.importCRB",
+    "onCommand:extension.openPC400"
+  ],
   "contributes": {
-    "languages": [{
-      "id": "crbasic",
-      "aliases": ["CRBasic", "crbasic"],
-      "extensions": [".cr1",".cr1x",".cr2",".cr3",".cr300",".cr5",".cr6",".cr8",".cr9",".cr9x",".dld",".crb"],
-      "configuration": "./language-configuration.json",
-      "icon": {
-        "dark": "./sources/crb_Icon.png",
-        "light": "./sources/crb_Icon.png"
+    "languages": [
+      {
+        "id": "crbasic",
+        "aliases": [
+          "CRBasic",
+          "crbasic"
+        ],
+        "extensions": [
+          ".cr1",
+          ".cr1x",
+          ".cr2",
+          ".cr3",
+          ".cr300",
+          ".cr5",
+          ".cr6",
+          ".cr8",
+          ".cr9",
+          ".cr9x",
+          ".dld",
+          ".crb"
+        ],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "dark": "./sources/crb_Icon.png",
+          "light": "./sources/crb_Icon.png"
+        }
       }
-    }],
-    "grammars": [{
-      "language": "crbasic",
-      "scopeName": "crb",
-      "path": "./syntaxes/crbasic.tmLanguage.json"
-    }],
+    ],
+    "grammars": [
+      {
+        "language": "crbasic",
+        "scopeName": "crb",
+        "path": "./syntaxes/crbasic.tmLanguage.json"
+      }
+    ],
     "snippets": [
       {
         "language": "crbasic",
         "path": "./snippets/crbasic.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "extension.importCRB",
+        "title": "Import CRB File"
+      },
+      {
+        "command": "extension.openPC400",
+        "title": "Open PC400"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "extension.importCRB",
+        "key": "ctrl+i",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "extension.openPC400",
+        "key": "f5",
+        "when": "editorTextFocus"
       }
     ]
   }
